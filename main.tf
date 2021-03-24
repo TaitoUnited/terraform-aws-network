@@ -19,7 +19,3 @@ locals {
     name = var.name
   }
 }
-
-provider "aws" {
-  region = "us-east-1"
-}
