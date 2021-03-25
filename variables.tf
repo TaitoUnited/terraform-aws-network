@@ -14,13 +14,21 @@
  * limitations under the License.
  */
 
+variable "tags" {
+  type = map(string)
+  default = {}
+  description = "A mapping of tags to assign to all resources."
+}
+
 variable "name" {
   type = string
+  description = "Unique name used as a prefix for all resources to avoid name conflicts within the AWS account."
 }
 
 variable "kubernetes_name" {
   type = string
   default = ""
+  description = "Name of the Kubernetes cluster located in this network (optional)."
 }
 
 variable "network" {

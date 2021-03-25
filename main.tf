@@ -15,7 +15,5 @@
  */
 
 locals {
-  tags = {
-    name = var.name
-  }
+  tags = var.tags
 }
