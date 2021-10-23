@@ -41,9 +41,8 @@ module "ssm-bastion" {
   count             = var.network.bastionHostEnabled ? 1 : 0
 
   source            = "JamesWoolfenden/ssm-bastion/aws"
-  version           = "0.1.36"
+  version           = "0.1.57"
   allowed_cidrs     = var.network.bastionAuthorizedCIDRs
-  common_tags       = local.tags
   vpc_id            = module.network.vpc_id
   instance_type     = "t2.micro"
   ssm_standard_role = aws_iam_policy.bastion.arn
