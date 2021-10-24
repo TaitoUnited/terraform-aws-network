@@ -28,7 +28,7 @@ output "database_subnets" {
 
 output "bastion_public_ip" {
   description = "Bastion public ip"
-  value       = module.ssm-bastion[0].client_public_ip
+  value       = length(module.ssm-bastion) > 0 ? module.ssm-bastion[0].client_public_ip : ""
 }
 
 /* TODO
