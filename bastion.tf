@@ -44,7 +44,7 @@ module "ssm-bastion" {
   version           = "0.1.57"
   allowed_cidrs     = var.network.bastionAuthorizedCIDRs
   vpc_id            = module.network.vpc_id
-  instance_type     = "t2.micro"
+  instance_type     = "t3.micro"
   ssm_standard_role = aws_iam_policy.bastion.arn
   subnet_id         = module.network.public_subnets[0]
   environment       = var.name
