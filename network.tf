@@ -24,7 +24,7 @@ data "aws_availability_zones" "available" {
 
 module "network" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.10.0"
+  version = "3.16.0"
   name    = "${var.name}-vpc"
   tags = merge(
     local.tags,
